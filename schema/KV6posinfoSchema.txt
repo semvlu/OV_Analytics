@@ -1,6 +1,0 @@
-https://htmwiki.nl/#!hackathon/realtime.md
-
-https://github.com/BISONNL/KV6
-
-https://htmwiki.nl/#!hackathon/bigdata.md
-
