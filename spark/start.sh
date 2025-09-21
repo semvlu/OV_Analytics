@@ -1,0 +1,1 @@
+python producer.py && python consumer.py && python batch.py

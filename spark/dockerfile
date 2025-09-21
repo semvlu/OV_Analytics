@@ -1,0 +1,8 @@
+FROM openjdk:17-jdk-slim
+RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
+# ./app: build context, i.e. local dir
+# /app: target dir in the container
+COPY ./app /app
+COPY ./data /data
+CMD ["sh", "start.sh"]
