@@ -1,6 +1,5 @@
 import duckdb
 import os
-import sys
 import math
 
 os.chdir("../data/warehouse")

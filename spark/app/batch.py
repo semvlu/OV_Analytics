@@ -4,8 +4,13 @@ from pyspark.sql.window import Window
 from pyspark.sql.types import FloatType
 import math
 import os
+import time
 # Data lake to data warehouse
 
+# Continuously run this batch job every 5 min
+# period=5
+# while True:
+#     time.sleep(period*60)
 
 save_dir = os.path.join(os.path.dirname(__file__), "../data/warehouse")
 os.makedirs(save_dir, exist_ok=True)
@@ -39,3 +44,4 @@ dist_udf = F.udf(dist, FloatType())
 df = df.withColumn("straight_line_distance", dist_udf("rd_x", "rd_y", "prev_rd_x", "prev_rd_y"))
 
 df.write.mode("overwrite").parquet(save_dir)
+spark.stop()
