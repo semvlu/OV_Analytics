@@ -1,0 +1,10 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: warehouse
+    ports:
+      # 8123: HTTP, 9000: native client
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
