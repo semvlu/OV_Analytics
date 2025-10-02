@@ -1,0 +1,31 @@
+# OV Analytics: Dutch Public Transport (OV) Analytic Platform
+
+Stream real-time data from NDOV (Nationale Data Openbaar Vervoer) Loket.
+
+PySpark: Store real-time data into Parquet data lake, batch process lake data into warehouse.
+
+Prometheus and Grafana for real-time streaming logging and visualisation.
+
+Tools used:
+
+- Container: Docker
+- ETL: Kafka, Spark, ZeroMQ, DuckDB
+- Data Lake, Warehouse, OLAP: DuckDB, Parquet, ClickHouse
+- Log & Visualisation: Prometheus, Grafana
+- User-end API: TypeScript, Apollo Server, GraphQL
+
+## Spark Job
+
+![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/spark.png?raw=true)
+
+## Prometheus
+
+![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/prometheus.png?raw=true)
+
+## Grafana Dashboard
+
+![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/grafana.png?raw=true)
+
+## GraphQL
+
+![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/gql.png?raw=true)
