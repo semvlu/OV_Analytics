@@ -20,12 +20,12 @@ Tools used:
 
 ## Prometheus
 
-![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/prometheus.png?raw=true)
+![alt text](https://github.com/semvlu/ov_analytics/blob/master/preview/prometheus.png?raw=true)
 
 ## Grafana Dashboard
 
-![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/grafana.png?raw=true)
+![alt text](https://github.com/semvlu/ov_analytics/blob/master/preview/grafana.png?raw=true)
 
 ## GraphQL
 
-![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/gql.png?raw=true)
+![alt text](https://github.com/semvlu/ov_analytics/blob/master/preview/gql.png?raw=true)
