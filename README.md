@@ -16,7 +16,7 @@ Tools used:
 
 ## Spark Job
 
-![alt text](https://github.com/semvlu/ov_analytics/blob/main/preview/spark.png?raw=true)
+![alt text](https://github.com/semvlu/ov_analytics/blob/master/preview/spark.png?raw=true)
 
 ## Prometheus
 
