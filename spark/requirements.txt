@@ -1,0 +1,10 @@
+# Producer
+kafka-python
+pyzmq
+
+# Consumer
+pyspark=4.0.1
+pandas
+
+# OLAP
+duckdb

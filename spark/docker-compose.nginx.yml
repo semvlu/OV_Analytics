@@ -1,0 +1,30 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_gateway
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx_certs:/etc/nginx/certs:ro
+    depends_on:
+      - graphql_api
+      - grpc_api
+      - clickhouse
+
+  graphql_api:
+    build: ./graphql_api # Node.js Apollo API
+    ports:
+      - "4000:4000"
+
+  grpc_api:
+    build: ./grpc_api # Python gRPC API
+    ports:
+      - "50051:50051"
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    ports:
+      - "8123:8123"
+      - "9000:9000"

@@ -1,0 +1,9 @@
+FROM openjdk:17-jdk-slim 
+FROM python:3.11-slim
+RUN pip freeze > requirements.txt
+WORKDIR /app
+# ./app: build context, i.e. local dir
+# /app: target dir in the container
+COPY ./app /app
+COPY ./data /data
+CMD ["sh", "start.sh"]

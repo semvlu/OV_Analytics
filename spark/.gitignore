@@ -1,0 +1,12 @@
+data/
+
+app/artifacts/
+schema/
+
+nginx_certs/
+
+# API
+**/.env
+*.log
+**/dist
+**/node_modules

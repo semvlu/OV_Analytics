@@ -1,0 +1,26 @@
+type Schema {
+  query: Query
+  # mutation: Mutation
+}
+
+type Query {
+  bus(journey: Int!): [Bus]
+  getBuses(amount: Int!): [Bus!]
+  stop: Stop
+  getStops(amount: Int!): [Stop!]!
+}
+
+type Bus {
+  jorurney_number: Int
+  ts: String
+  rd_x: String
+  rd_y: String
+}
+
+type Stop {
+  id: ID!
+  name: String!
+  latitude: Float
+  longitude: Float
+  routes: [String!]!
+}

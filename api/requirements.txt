@@ -1,0 +1,10 @@
+# User API
+fastapi==0.115.*
+uvicorn[standard]==0.34.*
+pyarrow==21.*
+pandas==2.3.2
+
+# Experiment
+grpcio
+grpcio-tools
+protobuf

@@ -1,0 +1,17 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: warehouse
+    environment:
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ""
+    ports:
+      # 8123: HTTP, 9000: native client
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./data/warehouse:/var/lib/clickhouse/user_files/warehouse # mount local folder into container
+
+volumes:
+  clickhouse_data:
