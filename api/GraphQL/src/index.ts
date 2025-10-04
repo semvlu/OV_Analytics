@@ -25,21 +25,11 @@ const client = createClient({
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-
-  /* Older version: apollo-server
-    formatResponse: (res: GraphQLResponse, requestContext: GraphQLRequestContext<any>) => {
-        // Bug fixed: header: Content-Type: text/html
-        // Set Content-Type header: application/json
-        requestContext.response.http.headers.set('Content-Type', 'application/json');
-        return res;
-    }
-  */
 });
 
 const startServer = async () => {
   try {
     await client.ping();
-    // mongoose.connect(MONGODB);
     console.log("Connected to ClickHouse");
 
     // Start the Apollo server
